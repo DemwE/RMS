@@ -18,9 +18,7 @@ export default function hero() {
                 </div>
             </div>
             <div className="flex justify-center items-center">
-                <div className="animate-fade-left animate-once">
-                    <Image src="/home/stars.png" alt="stars" width="500" height="500"/>
-                </div>
+                <Image src="/home/stars.png" alt="stars" width="500" height="500"/>
             </div>
         </section>
     )
