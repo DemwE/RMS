@@ -1,6 +1,6 @@
 import Header from "@/components/admin/header";
 import Link from 'next/link';
-import { PlayIcon } from '@heroicons/react/24/solid'; // Correct import statement
+import { PlayIcon, PlusIcon } from '@heroicons/react/24/solid'; // Correct import statement
 
 function BlockGame({name, id}) {
     return (
