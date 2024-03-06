@@ -48,10 +48,10 @@ export async function fetchAllPlayers(): Promise<Document[]> {
     }
 }
 
-interface Tournament {
+export interface Tournament {
     id: string,
-    players_ids: string[],
-    games_ids: string[],
+    players_ids?: string[],
+    games_ids?: string[],
     name: string,
     date: string,
     location: string,
