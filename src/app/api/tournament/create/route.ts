@@ -1,5 +1,4 @@
-import {createTournament} from "@/libs/databaseUtils";
-import {Tournament} from "@/libs/databaseUtils";
+import {createTournament, Tournament} from "@/libs/databaseUtils";
 
 export async function POST(req: Request) {
     console.log("Request received at /api/tournament/create");

@@ -1,5 +1,4 @@
-import {createPlayer} from "@/libs/databaseUtils";
-import {Player} from "@/libs/databaseUtils";
+import {createPlayer, Player} from "@/libs/databaseUtils";
 
 export async function POST(req: Request) {
     console.log("Request received at /api/player/create");
