@@ -1,4 +1,4 @@
-import {MongoClient, ServerApiVersion, Document} from "mongodb";
+import {MongoClient, ServerApiVersion, Document, ObjectId} from "mongodb";
 
 const MongoDB_Credentials = process.env.MONGODB_CREDENTIALS || "none";
 
@@ -13,7 +13,7 @@ function client() {
 }
 
 interface Player {
-    id: string,
+    _id: ObjectId,
     name: string,
     surname: string,
     email?: string,
@@ -49,7 +49,7 @@ export async function fetchAllPlayers(): Promise<Document[]> {
 }
 
 export interface Tournament {
-    id: string,
+    _id: ObjectId,
     players_ids?: string[],
     games_ids?: string[],
     name: string,
@@ -86,7 +86,7 @@ export async function fetchAllTournaments(): Promise<Document[]> {
 }
 
 interface Game {
-    id: string,
+    _id: ObjectId,
     tournament_id: string,
     players_ids: string[],
     winner_id: string,

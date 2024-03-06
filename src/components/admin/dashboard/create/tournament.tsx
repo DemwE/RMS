@@ -1,5 +1,5 @@
 'use client';
-import { createTournament, Tournament } from "@/libs/databaseUtils";
+import { Tournament } from "@/libs/databaseUtils";
 import { generateUUID } from "@/libs/uuid";
 
 export default function Create_Tournament() {
@@ -30,12 +30,17 @@ export default function Create_Tournament() {
         </form>
     );
 }
+
+import axios from 'axios';
+
 function handleSubmit() {
-    let tournament: Tournament = {
-        id: generateUUID(),
+    let tournament = {
+        _id: generateUUID(),
         name: (document.getElementById("name") as HTMLInputElement).value,
         location: (document.getElementById("location") as HTMLInputElement).value,
         date: (document.getElementById("date") as HTMLInputElement).value
     }
-    createTournament(tournament).then(r => console.log(r));
+    axios.post('/api/tournament/create', tournament)
+        .then(response => console.log(response.data))
+        .catch(error => console.error(error));
 }
