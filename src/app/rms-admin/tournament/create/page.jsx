@@ -11,7 +11,7 @@ export default function Page() {
     const router = useRouter()
 
     React.useEffect(() => {
-        if (user == null) router.push("/rms-admin/signin")
+        if (user == null) router.push("/rms-admin/login")
     }, [user])
 
     if(user != null) {

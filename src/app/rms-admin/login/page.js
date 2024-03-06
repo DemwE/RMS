@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import signIn from "@/fireauthdb/auth/signin";
+import login from "@/fireauthdb/auth/login";
 import {useRouter} from 'next/navigation';
 
 function Page() {
@@ -11,7 +11,7 @@ function Page() {
     const handleForm = async (event) => {
         event.preventDefault()
 
-        const {result, error} = await signIn(email, password);
+        const {result, error} = await login(email, password);
 
         if (error) {
             return console.log(error)
