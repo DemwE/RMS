@@ -16,7 +16,7 @@ interface Player {
     id: string,
     name: string,
     surname: string,
-    email: string,
+    email?: string,
     tournament_id: string,
 }
 

@@ -1,6 +1,6 @@
 import Header from "@/components/admin/header";
 
-export default function AdminSettings({ user }) {
+export default function AdminSettings() {
     return (
         <div>
             <Header/>

@@ -2,7 +2,7 @@
 import React from "react";
 import { useAuthContext } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
-import AdminTournaments from "../../../components/admin/dashboard/tournaments";
+import AdminTournaments from "@/components/admin/dashboard/tournaments";
 function Page() {
     const { user } = useAuthContext()
     const router = useRouter()
@@ -13,7 +13,7 @@ function Page() {
 
     if(user != null){
         return (
-            <AdminTournaments user={""} />
+            <AdminTournaments />
         )
     }
 
