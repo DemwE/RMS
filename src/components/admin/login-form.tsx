@@ -77,30 +77,3 @@ export default function LoginForm(csrfToken: any){
       </form>
     )
 }
-
-// function LoginButton(loginValue: any, passValue: any) {
-//   const adminLogin = process.env.ADMIN_LOGIN;
-//   const adminPass = process.env.ADMIN_PASS;
-//   let isAuthenticated = false;
-
-
-//   return (
-//     <Button className="mt-4 w-full" border={''} color={''} height={''} onClick={function (): void {
-//       if (adminLogin == loginValue && adminPass == passValue) { isAuthenticated = true; };
-//       console.log(isAuthenticated);
-//     }} ariaDisabled={false} radius={''} width={''}>
-//       Log In <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
-//     </Button>
-//   )
-// }
-
-// function LoginButtonEmpty(loginValue: any, passValue: any) {
-//   return (
-//     <Button onClick={() => console.log('Button clicked')} text="Click me!" />
-//   //   <Button onClick={function (): void {
-//   //     throw new Error('Function not implemented.');
-//   //   } } text={''}>
-//   //     Log In <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
-//   //   </Button>
-//   )
-// }

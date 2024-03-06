@@ -4,7 +4,7 @@
 import { useSession } from 'next-auth/react'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
-import Home from '@/components/admin/dashboard/home'
+import AdminHome from '@/components/admin/dashboard/home'
 
 export default function ClientPage() {
     const { data: session } = useSession({
@@ -15,9 +15,6 @@ export default function ClientPage() {
     })
 
     return (
-        <section className="flex flex-col gap-6">
-            <Home user={session?.user?.name} />
-            <li><Link href="/api/auth/signout">Sign Out</Link></li>
-        </section>
+        <AdminHome user={session?.user?.name} />
     )
 }

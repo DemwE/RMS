@@ -1,17 +1,22 @@
-import { options } from "@/app/api/auth/[...nextauth]/options"
-import { getSession } from "next-auth/react"
-import Home from '@/components/admin/dashboard/home'
+'use client'
+// Remember you must use an AuthProvider for 
+// client components to useSession
+import { useSession } from 'next-auth/react'
+import { redirect } from 'next/navigation'
+import AdminHome from '@/components/admin/dashboard/home'
 
-export default async function Dashboard() {
-  const session = await getSession(options)
+export default function ClientPage() {
+    const { data: session, status } = useSession({
+        required: true,
+        onUnauthenticated() {
+            redirect('/api/auth/signin?callbackUrl=/rms-admin/')
+        }
+    })
+    if (status === "authenticated") {
+      return (
+        <AdminHome user={session?.user?.name} />
+      ) 
+    }
 
-  return (
-    <>
-      {session ? (
-        <Home userName={session?.user?.name} />
-      ) : (
-        <h1 className="text-5xl">User not sign in</h1>
-      )}
-    </>
-  )
+
 }
