@@ -28,10 +28,6 @@ function Page() {
         <main className='flex items-center justify-center md:h-screen'>
             <div className='relative mx-auto flex w-full max-w[400px] flex-coll space-y-2.5 p-4 md:h-[500px] md:-mt-32'>
                 <div className='flex h-20 w-full justify-center items-center rounded-lg bg-blue-500 p-3 md:h-full'>
-                    {/*<LoginForm onSubmit={handleForm}*/}
-                    {/*           onEmailChange={(e) => setEmail(e.target.value)}*/}
-                    {/*           onPasswordChange={(e) => setPassword(e.target.value)}*/}
-                    {/*/>*/}
                     <form className="space-y-3" onSubmit={handleForm}>
                         <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
                             <h1 className={`mb-3 text-2xl`}>
@@ -98,23 +94,6 @@ function Page() {
             </div>
         </main>
     )
-    // return (<div className="wrapper">
-    //     <div className="form-wrapper">
-    //         <h1 className="mt-60 mb-30">Sign up</h1>
-    //         <form onSubmit={handleForm} className="form">
-    //             <label htmlFor="email">
-    //                 <p>Email</p>
-    //                 <input onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="example@mail.com" />
-    //             </label>
-    //             <label htmlFor="password">
-    //                 <p>Password</p>
-    //                 <input onChange={(e) => setPassword(e.target.value)} required type="password" name="password" id="password" placeholder="password" />
-    //             </label>
-    //             <button type="submit">Sign up</button>
-    //         </form>
-    //     </div>
-    //
-    // </div>);
 }
 
 export default Page;
