@@ -13,7 +13,7 @@ function Page() {
 
     if(user != null){
         return (
-            <AdminHome user={""} />
+            <AdminHome/>
         )
     }
 
