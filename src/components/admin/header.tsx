@@ -67,7 +67,7 @@ function SubPageLink({link, icon, name}: SubPageLinkProps) {
     return (
         <li>
             <Link href={link}
-                  className="flex py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+                  className="flex py-2 px-3 text-black bg-black rounded font-normal md:bg-transparent md:text-black md:p-0"
                   aria-current="page">{icon}{name}</Link>
         </li>
     )
