@@ -85,6 +85,20 @@ export async function fetchAllTournaments(): Promise<Document[]> {
     }
 }
 
+export async function fetchTournamentById(tournament_id: string): Promise<Document[]> {
+    const clientInstance = client();
+    try {
+        await clientInstance.connect();
+        const collection = clientInstance.db("rms").collection("tournaments");
+        return await collection.find({ _id: new ObjectId(tournament_id) }).toArray();
+    } catch (error) {
+        console.error(`Error occurred while fetching tournament: ${error}`);
+        return Promise.reject(error);
+    } finally {
+        await clientInstance.close();
+    }
+}
+
 export interface Game {
     _id: ObjectId,
     tournament_id: string,
