@@ -1,6 +1,6 @@
 'use client';
-import { Tournament } from "@/libs/databaseUtils";
 import { generateUUID } from "@/libs/uuid";
+import axios from 'axios';
 
 export default function Create_Tournament() {
     return (
@@ -30,8 +30,6 @@ export default function Create_Tournament() {
         </form>
     );
 }
-
-import axios from 'axios';
 
 function handleSubmit() {
     let tournament = {

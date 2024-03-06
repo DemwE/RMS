@@ -1,12 +1,5 @@
 import {createTournament} from "@/libs/databaseUtils";
-import {ObjectId} from "mongodb";
-
-interface Tournament {
-    _id: ObjectId,
-    name: string,
-    date: string,
-    location: string,
-}
+import {Tournament} from "@/libs/databaseUtils";
 
 export async function POST(req: Request) {
     console.log("Request received at /api/tournament/create");

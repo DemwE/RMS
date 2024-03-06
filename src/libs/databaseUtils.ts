@@ -12,11 +12,11 @@ function client() {
     });
 }
 
-interface Player {
+export interface Player {
     _id: ObjectId,
     name: string,
     surname: string,
-    email?: string,
+    email: string,
     tournament_id: string,
 }
 
@@ -85,7 +85,7 @@ export async function fetchAllTournaments(): Promise<Document[]> {
     }
 }
 
-interface Game {
+export interface Game {
     _id: ObjectId,
     tournament_id: string,
     players_ids: string[],

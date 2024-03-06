@@ -1,12 +1,5 @@
 import {createGame} from "@/libs/databaseUtils";
-import {ObjectId} from "mongodb";
-
-interface Game {
-    _id: ObjectId,
-    tournament_id: string,
-    players_ids: string[],
-    winner_id: string,
-}
+import {Game} from "@/libs/databaseUtils";
 
 export async function POST(req: Request) {
     console.log("Request received at /api/game/create");
