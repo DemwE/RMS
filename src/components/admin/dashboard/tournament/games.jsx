@@ -7,7 +7,7 @@ function BlockGame({name, id}) {
         <Link href={`/rms-admin/game/${id}`}>
             <div className="border-slate-500 border-2 p-4 flex items-center rounded-lg max-h-20 hover:bg-gray-100 cursor-pointer">
                 <h1 className="flex">
-                    <PlayIcon className='h-6 w-6 ml-1'/>
+                    {id === "create" ? <PlusIcon className='h-6 w-6 ml-1'/> : <PlayIcon className='h-6 w-6 ml-1'/>}
                     {name}
                 </h1>
             </div>
@@ -26,6 +26,7 @@ export default function AdminGames({id}) {
                     <BlockGame name="Game 2" id="game-2"/>
                     <BlockGame name="Game 3" id="game-3"/>
                     <BlockGame name="Game 4" id="game-4"/>
+                    <BlockGame name="Add" id="create"/>
                 </div>
             </div>
         </div>
