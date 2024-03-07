@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default function Create_Tournament() {
     return (
-        <form className="max-w-sm mx-auto">
+        <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
             <div className="mb-5">
                 <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">Name</label>
                 <input type="text" id="name"
